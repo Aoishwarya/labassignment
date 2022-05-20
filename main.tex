@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{}
+\title{\textbf{Data Structure : Theoretical Approach}}
+
+\author{Aoishwarya Mojumder\\Department of Information and Communication Engineering\\Noakhali Science and Technology University}
+
+
+\begin{document}
+
+
+\maketitle
+\begin{center}
+    \includegraphics[width=.60\textwidth]{20210917_122345.png}
+\end{center}
+
+\section{\textbf{\color{blue}INTRODUCTION:}}
+Data structures serve as the basis for abstract data 
+types (ADT). "The ADT defines the logical form of 
+the data type. The data structure implements the 
+physical form of the data type."Different types of data 
+structures are suited to different kinds of applications, 
+and some are highly specialized to specific tasks. For 
+example, relational databases commonly use B-tree 
+indexes for data retrieval, while compiler 
+implementations usually use hash tables to look up 
+identifiers. Data structures provide a means to manage 
+large amounts of data efficiently for uses such as large 
+databases and internet indexing services. Usually, 
+efficient data structures are key to designing efficient 
+algorithms. Some formal design methods and 
+programming languages emphasize data structures, 
+rather than algorithms, as the key organizing factor in 
+software design. Data structures can be used to 
+organize the storage and retrieval of information 
+stored in both main memory and secondary memory. 
+Data structures are generally based on the ability of a computer to fetch and store data at any place in its 
+memory, specified by a pointer—a bit string, 
+representing a memory address, that can be itself 
+stored in memory and manipulated by the program. 
+
+The implementation of a data structure usually 
+requires writing a set of procedures that create and 
+manipulate instances of that structure. The efficiency 
+of a data structure cannot be analyzed separately from 
+those operations. This observation motivates the 
+theoretical concept of an abstract data type, a data 
+structure that is defined indirectly by the operations 
+that may be performed on it, and the mathematical 
+properties of those operations (including their space 
+and time cost).[citation needed]An array is a number 
+of elements in a specific order, typically all of the 
+same type (depending on the language, individual 
+elements may either all be forced to be the same type, 
+or may be of almost any type). Elements are accessed 
+using an integer index to specify which element is 
+required. Typical implementations allocate contiguous 
+memory words for the elements of arrays (but this is 
+not necessity). Arrays may be fixed-length or 
+resizable. A linked list (also just called list) is a linear 
+collection of data elements of any type, called nodes, 
+where each node has itself a value, and points to the 
+next node in the linked list. The principal advantage 
+of a linked list over an array, is that values can always 
+be efficiently inserted and removed without relocating 
+the rest of the list. Certain other operations, such as 
+random access to a certain element, are however 
+slower on lists than on arrays.
+
+
+\section{\textbf{\color{blue}ABSTRACT}}
+Run with accordance with significance. The first if 
+these this paper explains about the basic terminologies 
+used in this paper in data structure. Better running 
+times will be other constraints, such as memory use 
+which will be paramount. The most appropriate data 
+structures and algorithms rather than through hacking 
+removing a few statements by some clever coding. 
+Data structures serve as the basis for abstract data 
+types (ADT). "The ADT defines the logical form of 
+the data type. The data structure implements the 
+physical form of the data type."Different types of data 
+structures are suited to different kinds of applications, 
+and some are highly specialized to specific tasks. For 
+example, relational databases commonly use B-tree 
+indexes for data retrieval, while compiler 
+implementations usually use hash tables to look up 
+identifiers.
+
+
+
+
+\section{\textbf{\color{blue}Depth of node}}
+The depth of node is the length of the path from the 
+root to the node. A rooted tree with only one node has 
+a depth of zero.
+\begin{center}
+\includegraphics[width=.60\textwidth]{Tree depth.jpg}
+\end{center}
+
+
+The height of a node in a binary tree is the largest number of edges in a path from a leaf node to a target node. The height of a binary tree is the height of the root node in the whole binary tree. In other words, the height of a binary tree is equal to the largest number of edges from the root to the most distant leaf node.
+
+A similar concept in a binary tree is the depth of the tree. The depth of a node in a binary tree is the total number of edges from the root node to the target node. Similarly, the depth of a binary tree is the total number of edges from the root node to the most distant leaf node.
+
+\section{\textbf{\color{blue}Threaded binary tree}}
+In a threaded binary tree all the null printers which 
+wasted the space in linked representation is converted 
+into useful links called threads thus representation of a 
+binary tree using these threads is called threaded 
+binary tree.
+\begin{center}
+\includegraphics[width=.60\textwidth]{Threaded tree.jpg}
+
+\end{center}
+
+\section{\textbf{\color{blue}Equation}}
+
+1.Infix Expression is A + B * C$\\
+2.Prefix Expression is + A * B C$\\
+3.Postfix Expression is A B C * +$\\
+
+\section{\color{blue}Algorithm complexity}
+
+\begin{center}  
+\begin{tabular}{|l|c|r|t|}
+\hline  
+Algorithm &Best Case&Expected&New Col\\ \hline
+
+Selection sort&O(N2)&O(N2)&A\\ \hline 
+Merge sort &O(NlogN) &O(NlogN)&B\\ \hline 
+Linear search& O(1)& O(N)&C\\ \hline 
+Binary search &O(1)& O(logN)&D\\ \hline 
+E&F&G&H\\ \hline 
+
+\end{tabular}
+\end{center}
+Algorithmic complexity is a measure of how long an algorithm would take to complete given an input of size n. If an algorithm has to scale, it should compute the result within a finite and practical time bound even for large values of n. For this reason, complexity is calculated asymptotically as n approaches infinity.
+
+\section{\textbf{\color{blue}Binary tree}}
+ \begin{center}
+     \includegraphics[width=\linewidth]{Tree2.jpg}
+ \end{center}
+ Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers.It is called a binary tree because each tree node has a maximum of two children.
+ 
+\section{\color{blue}Analysis of sequential search}
+To analyze searching algorithms, we need to decide 
+on a basic unit of computation. Recall that this is 
+typically the common step that must be repeated in 
+order to solve the problem. For searching, it makes 
+sense to count the number of comparisons performed. 
+Each comparison may or may not discover the item 
+we are looking for. In addition, we make another 
+assumption here. The list of items is not ordered in any way. The items have been placed randomly into 
+the list. In other words, the probability that the item 
+we are looking for is in any particular position is 
+exactly the same for each position of the list. 
+If the item is not in the list, the only way to know it is 
+to compare it against every item present. If there are 
+\(n\) items, then the sequential search requires \(n\) 
+comparisons to discover that the item is not there. In 
+the case where the item is in the list, the analysis is 
+not so straightforward. There are actually three 
+different scenarios that can occur. In the best case we 
+will find the item in the first place we look, at the 
+beginning of the list. We will need only one 
+comparison. In the worst case, we will not discover 
+the item until the very last comparison, the nth 
+comparison.
+\section{\color{blue}Conclusion }
+This paper covered the basics of data structures.
+Data Structures is not just limited to Stack, 
+Queues, and Linked Lists but is quite a vast area.
+There are many more data structures which include  Graphs, Trees, etc. Each data 
+structure has its own advantages and disadvantages 
+and must be used according to the needs of the 
+application.It is important to know how 
+things work under the hood. Dynamic data structures 
+require dynamic storage allocation and reclamation. 
+This may be accomplished by the programmer or may 
+be done implicitly by a high-level language. It is 
+important to understand the fundamentals of storage 
+management because these techniques have
+significant impact on the behavior of programs. The
+basic idea is to keep a pool of memory elements that 
+may be used to store components of dynamic data 
+structures when needed. Allocated storage may be 
+returned to the pool when no longer needed. In this 
+way, it may be used and reused. This contrasts sharply 
+with static allocation, in which storage is dedicated
+or the use of static data structures. It cannot then be 
+reclaimed for other uses, even when no needed for the 
+static data structure. As a result, dynamic allocation 
+makes it possible to solve larger problems that might 
+otherwise be storage-limited. Garbage collection and 
+reference counters are two basic techniques for 
+implementing storage management. 
+\section{\color{blue}References}
+1. Book of Data structures through C G. S Baluja.\\
+2. Pieren Garry Department of computer science 
+New York University.\\
+3. Nick jones department of data mining Australia.\\
+4. Wikipedia sequential search.\\
+
+\end{document}
